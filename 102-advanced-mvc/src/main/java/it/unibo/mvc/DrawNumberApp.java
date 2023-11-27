@@ -1,6 +1,10 @@
 package it.unibo.mvc;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,6 +31,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
             view.setObserver(this);
             view.start();
         }
+        
         this.model = new DrawNumberImpl(MIN, MAX, ATTEMPTS);
     }
 
